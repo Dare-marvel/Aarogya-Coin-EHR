@@ -5,12 +5,6 @@
 The aim of this framework is firstly to implement blockchain technology for EHR and secondly to provide secure storage of electronic records by defining granular access rules for the users of the proposed framework. Moreover, this framework also discusses the scalability problem faced by the blockchain technology in general via use of off-chain storage of the records. This framework provides the EHR system with the benefits of having a scalable, secure and integral blockchain-based solution.
 <!-- TABLE OF CONTENTS -->
 
-
-## Application Demo Video  
-
-[![Demo](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/YT.png)](https://youtu.be/ieBG1Hj8naA)
-
-
 ## Installation
 
 The projects requires NodeJS and npm to work. Instructions to install all other dependencies are given below.
@@ -26,7 +20,48 @@ The projects requires NodeJS and npm to work. Instructions to install all other 
 
 ### IPFS
 
-1. Go to the [github page](https://github.com/ipfs/ipfs-desktop) of IPFS and install IPFS Desktop
+# Install IPFS in Windows
+
+## Install Go
+
+- Head to the [download website](https://golang.org/dl/)
+- Click the latest version and download the `.msi` file
+
+## Create Paths
+
+- Create `GOROOT` system variable if it doesn't exist in `C:\Go`
+- Create a `PATH` environment variable at `C:\Go\bin`
+- Create a working environment system variable called `GOPATH` at a location where you want your Go projects install
+	+ If you check around github, this is referred to as `$GOPATH` in Mac/Linux or `%GOPATH%` in Windows
+	+ Don't be confused, it's just a convenient shortcut
+		* For example: we'll create a new system variable called `GOPATH` at `C:\OpenBazaar\Go`
+		* Here `%GOPATH%` is `C:\OpenBazaar\Go`
+		* So `%GOPATH%\src\github.com` is the same as writing `C:\OpenBazaar\Go\src\github.com`
+	+ Check to see if this worked by opening a new terminal and typing `echo %GOPATH%`
+		* The output should the path you set in the system variable (i.e. `C:\OpenBazaar\Go` in our example)
+- Close and reopen the terminal to ensure the paths are set 
+
+## Install Dependencies
+
+- Install `gx`
+	+ Open the terminal and type `go get -u github.com/whyrusleeping/gx`
+		* This will install `gx` in `%GOPATH%\src\github.com\whyrusleeping/gx`
+- Install `gx-go`
+	+ Open the terminal and type `go get -u github.com/whyrusleeping/gx-go`
+		* This will install `gx-go` in `%GOPATH%\src\github.com\whyrusleeping/gx-go`
+- Close and reopen the terminal to ensure the paths are set 
+
+## Install IPFS
+
+- Download _without_ installing `ipfs`
+	+ Open the terminal and type `go get -d github.com/ipfs/go-ipfs`
+		* This will install `ipfs` in `%GOPATH%\src\github.com\ipfs\go-ipfs\`
+	+ Then type `cd %GOPATH%\src\github.com\ipfs\go-ipfs`
+	+ Install with `gx` with the following command `gx --verbose install --global`
+	+ Then type `cd cmd/ipfs && go build`
+	+ IPFS should now be installed, test to see if you get a response by typing `ipfs` in the terminal
+- Add `ipfs.exe` to your environment variables path
+  + `%GOPATH%\src\github.com\ipfs\go-ipfs\cmd\ipfs` (use the full file path, don't write in `%GOPATH`)
 
 ### Local server
 
