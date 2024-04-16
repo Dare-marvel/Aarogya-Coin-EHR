@@ -1,4 +1,4 @@
-# SwasthyaChain : Health Records Management Using Blockchain
+# AarogyaCoin : Health Records Management Using Blockchain
 
 
 ## Introduction
