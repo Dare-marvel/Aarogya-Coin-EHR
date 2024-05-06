@@ -134,7 +134,15 @@ var agentContractAddress = '0x75E115394aacC7c6063E593B9292CB9417E4cbeC';
   ![alt text](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/con-g1.png)
 
 #### 2. Starting IPFS
-  - Start the IPFS Desktop Application
+- Go in command prompt and start IPFS application by going to the appropriate directory:
+```
+cd C:\Users\<username>\go\pkg\mod\github.com\ipfs\kubo@v0.28.0\cmd\ipfs>
+```
+- Start IPFS Daemon
+```
+ipfs daemon
+```
+
   
 #### 3. Start a local server
   - Open a new terminal window and navigate to `/YOUR_PROJECT_DIRECTORY/app/`.
