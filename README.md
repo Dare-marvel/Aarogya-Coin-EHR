@@ -133,7 +133,7 @@ var agentContractAddress = '0x75E115394aacC7c6063E593B9292CB9417E4cbeC';
   - Select any account from ganache and copy the private key to import account into metaMask
   ![alt text](https://raw.githubusercontent.com/SuyashMore/SwasthyaChain/master/images/con-g1.png)
 
-#### 2. Starting IPFS 
+#### 2. Starting IPFS
   - Start the IPFS Desktop Application
   
 #### 3. Start a local server
